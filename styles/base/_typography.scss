@@ -1,0 +1,28 @@
+// Heading 
+.heading-1 {
+    font-family: $ft-roboto;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.2em;
+}
+
+// Text
+.text {
+    font-family: $ft-roboto;
+    color: $clr-dark-grey;
+    font-weight: 300;
+    font-size: .9rem;
+    line-height: 1.2em;
+
+    &--logo {
+        color: inherit;
+        font-family: $ft-shrik;
+    }
+}
+
+.location-text {
+    font-family: $ft-roboto;
+    font-size: .9rem;
+    font-weight: 500;
+    color: $clr-dark-grey;
+}

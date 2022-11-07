@@ -1,0 +1,18 @@
+// ************************* utils
+@import './utils/variables';
+@import './utils/variables';
+
+// ************************* base
+@import './base/reset';
+@import './base/typography';
+
+// ************************* components
+@import './components/header';
+@import './components/btn';
+@import './components/footer';
+
+// ************************* pages
+// home
+@import './pages/home/home';
+@import './pages/home/location';
+@import './pages/home/intro';

@@ -8,12 +8,64 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap"
             rel="stylesheet"
         />
-        <script src="https://kit.fontawesome.com/59d9bb69c9.js" crossorigin="anonymous"></script>
+        <script
+            src="https://kit.fontawesome.com/59d9bb69c9.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="./styles/styles.css" />
     </head>
-    <body>
-        
+    <body class="home">
+        <header class="home__header header">
+            <img
+                src="./images/logo/ohmyfood.png"
+                alt="logo de la start-up OhMyFood"
+                class="header__logo"
+            />
+
+            <a href="#" class="header__btn btn--back">
+                <i class="btn--back__icon fa-solid fa-arrow-left"></i>
+            </a>
+        </header>
+        <main>
+            <div class="home__location location">
+                <i class="location__icon fa-solid fa-location-dot"></i>
+                <p class="location__text location-text">Paris, Belleville</p>
+            </div>
+            <div class="home__intro intro">
+                <h1 class="intro__title heading-1">
+                    Réserver le menu qui vous convient
+                </h1>
+                <p class="intro__text text">
+                    Découvrez des restaurants d'exception, séléctionné par nos
+                    choix
+                </p>
+                <a href="#" class="intro__btn btn btn--explore">
+                    Explorer nos restaurants
+                </a>
+            </div>
+        </main>
+        <footer class="home__footer footer">
+            <p class="footer__logo text--logo"> ohmyfood</p>
+
+            <div class="footer__text-container">
+                <a href="#" class="footer__link link">
+                    <i class="link__icon fa-solid fa-utensils fa-xs"></i>
+                    Proposer un restaurant
+                </a>
+                <a href="#" class="footer__link link">
+                    <i class="link__icon fa-solid fa-handshake-angle fa-xs"></i>
+                    Devenir partenaires
+                </a>
+                <a href="#" class="footer__link link">
+                    Mentions légales
+                </a>
+                <a href="#" class="footer__link link">
+                    Contact
+                </a>
+            </div>
+        </footer>
     </body>
 </html>

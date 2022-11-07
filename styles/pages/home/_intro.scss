@@ -1,0 +1,16 @@
+.intro {
+    background-color: $clr-light;
+    padding: 30px;
+    text-align: center;
+
+    &__title {
+    }
+
+    &__text {
+        margin-top: 10px;
+    }
+
+    &__btn {
+        margin-top: 30px;
+    }
+}

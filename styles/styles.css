@@ -1,3 +1,250 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.heading-1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.2em;
+}
+
+.text {
+  font-family: "Roboto", sans-serif;
+  color: #3c3c3c;
+  font-weight: 300;
+  font-size: 0.9rem;
+  line-height: 1.2em;
+}
+.text--logo {
+  color: inherit;
+  font-family: "Shrikhand", cursive;
+}
+
+.location-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #3c3c3c;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.155);
+}
+.header__btn {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header__logo {
+  width: 150px;
+}
+
+.btn--back__icon {
+  color: #000;
+}
+.btn--explore {
+  display: inline-block;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  padding: 15px 20px;
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.155);
+}
+.btn--explore:hover {
+  background: linear-gradient(to bottom right, #FF79DA 40%, #9356DC);
+  box-shadow: 0px 1px 8px 4px rgba(0, 0, 0, 0.2);
+}
+
+.link {
+  display: block;
+  color: #f7f7f7;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.link__icon {
+  margin-right: 8px;
+}
+.link:hover {
+  color: #fff;
+}
+
+.footer {
+  background-color: #3c3c3c;
+  padding: 20px 20px 30px;
+  color: #f7f7f7;
+}
+.footer__text-container {
+  margin-top: 15px;
+}
+.footer__link {
+  margin-top: 8px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 10px;
+  background-color: #eee;
+}
+.location__icon {
+  margin-right: 10px;
+  color: #3c3c3c;
+}
+
+.intro {
+  background-color: #f7f7f7;
+  padding: 30px;
+  text-align: center;
+}
+.intro__text {
+  margin-top: 10px;
+}
+.intro__btn {
+  margin-top: 30px;
+}
 
 /*# sourceMappingURL=styles.css.map */
