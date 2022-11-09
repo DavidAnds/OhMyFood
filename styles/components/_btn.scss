@@ -1,34 +1,118 @@
-.btn {
-    &--back {
+.btn-back {
+    &__icon {
+        color: $clr-black;
+    }
+}
+
+.btn-explore {
+    font-family: $ft-roboto;
+    font-size: 0.9rem;
+    border: none;
+    box-shadow: $box-shadow-md;
+    display: inline-block;
+    background: linear-gradient(to bottom right, $clr-secondary, $clr-primary);
+    padding: 15px 20px;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover {
+        background: linear-gradient(
+            to bottom right,
+            $clr-secondary 40%,
+            $clr-primary
+        );
+        box-shadow: $box-shadow-md--hover;
+    }
+}
+
+.btn-func {
+    font-family: $ft-roboto;
+    font-size: 0.9rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 97%;
+    text-align: start;
+    font-weight: 700;
+    padding: 25px 30px;
+    border-radius: 20px;
+    box-shadow: $box-shadow-sm;
+    background-color: $clr-light;
+
+    &__number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 22px;
+        height: 22px;
+        border-radius: 100%;
+        background-color: $clr-primary;
+        color: $clr-white;
+        font-weight: 400;
+        position: absolute;
+        left: -12px;
+    }
+
+    &__icon {
+        color: $clr-grey;
+        margin-right: 20px;
+    }
+
+    &:hover {
+        background-color: $clr-white;
+        box-shadow: $box-shadow-sm;
+    }
+    &--primary {
+        background-color: rgba($clr-primary, $alpha: 0.2);
+
+        &:hover {
+            background-color: rgba($clr-primary, $alpha: 0.15);
+        }
+
         &__icon {
-            color: $clr-black;
+            color: $clr-primary;
+        }
+    }
+}
+
+.btn-like {
+    border: none;
+    cursor: pointer;
+    background: none;
+
+    &__icon {
+        position: absolute;
+        font-size: 20px;
+        transition: .2s ease-in-out;
+
+        &--bg {
+            color: white;
         }
     }
 
-    &--explore {
-        display: inline-block;
-        background: linear-gradient(
-            to bottom right,
-            $clr-secondary,
-            $clr-primary
-        );
-        padding: 15px 20px;
-        border-radius: 50px;
-        color: white;
-        text-decoration: none;
-        font-family: $ft-roboto;
-        font-size: 0.9rem;
-        transition: all 0.2s;
-        box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.155);
+    &:hover .btn-like__icon--bg,
+    &:hover .btn-like__icon--nobg {
+        background: linear-gradient($clr-primary, $clr-secondary);
+        -webkit-background-clip: text;
+        background-clip: text;
+      color: transparent;
+    }
+}
 
-        &:hover {
-            background: linear-gradient(
-                to bottom right,
-                $clr-secondary 40%,
-                $clr-primary
-            );
-            box-shadow: 0px 1px 8px 4px rgba(0, 0, 0, 0.2);
-        }
+.btn-validation {
+    background: $clr-tertiary;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .2s ease-in;
+
+    &__icon {
+        color: $clr-white
     }
 }
 
@@ -38,7 +122,7 @@
     color: $clr-light;
     text-decoration: none;
     font-family: $ft-roboto;
-    font-size: .8rem;
+    font-size: 0.8rem;
     font-weight: 400;
 
     &__icon {

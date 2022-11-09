@@ -4,13 +4,49 @@
     font-weight: 700;
     font-size: 1.4rem;
     line-height: 1.2em;
+
+    &--bis {
+        font-family: $ft-shrik;
+    }
+}
+
+.heading-2 {
+    font-family: $ft-roboto;
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.2em;
+}
+
+.heading-3 {
+    font-family: $ft-roboto;
+    font-weight: 300;
+    font-size: .9rem;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    position: relative;
+
+    &::before {
+        content: ' ';
+        width: 40px;
+        height: 3px;
+        background-color: $clr-tertiary;
+        position: absolute;
+        top: 20px;
+    }
+}
+
+.heading-4 {
+    font-family: $ft-roboto;
+    font-weight: 700;
+    font-size: .9rem;
+    line-height: 1.2em;
 }
 
 // Text
 .text {
     font-family: $ft-roboto;
     color: $clr-dark-grey;
-    font-weight: 300;
+    font-weight: 400;
     font-size: .9rem;
     line-height: 1.2em;
 
@@ -20,6 +56,9 @@
     }
 }
 
+.bold {
+    font-weight: 700;
+}
 .location-text {
     font-family: $ft-roboto;
     font-size: .9rem;

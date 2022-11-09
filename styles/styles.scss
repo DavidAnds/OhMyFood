@@ -7,12 +7,20 @@
 @import './base/typography';
 
 // ************************* components
-@import './components/header';
 @import './components/btn';
+@import './components/card';
+@import './components/header';
 @import './components/footer';
+@import './components/loader';
 
 // ************************* pages
 // home
 @import './pages/home/home';
 @import './pages/home/location';
 @import './pages/home/intro';
+@import './pages/home/functionning';
+@import './pages/home/restaurants';
+
+// menu
+@import './pages/menu-page/menu-page';
+@import './pages/menu-page/menu';

@@ -1,0 +1,15 @@
+.functionning {
+    padding: 40px 15px 60px;
+    background-color: $clr-white;
+
+    &__btn-container {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__btn:not(:first-child){
+        margin-top: 30px;
+    }
+}

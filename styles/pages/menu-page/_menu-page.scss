@@ -1,0 +1,11 @@
+.menu-page {
+    &__container {
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding-top: 180px;
+        
+        &--a-la-francaise {
+            background-image: url('../../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
+        }
+    }
+}
