@@ -1,4 +1,6 @@
 .menu {
+    display: flex;
+    flex-direction: column;
     background-color: $clr-light;
     padding: 30px 15px;
     border-top-left-radius: 40px;
@@ -8,18 +10,30 @@
         position: relative;
     }
 
-    &__btn {
+    &__btn-like {
         position: absolute;
         top: 0;
         right: 30px;
     }
 
-    &__item {
-        margin-top: 20px;
+    &__title {
+        margin-bottom: 25px;
+    }
+
+    &__item:not(:last-child){
+        margin-bottom: 40px;
     }
 
     &__card-container {
         margin-top: 20px;
+    }
+
+    &__card:not(:first-child) {
+        margin-top: 10px;
+    }
+
+    &__btn-start {
+        align-self: center;
     }
 
     

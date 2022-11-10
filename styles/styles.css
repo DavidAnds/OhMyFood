@@ -197,11 +197,26 @@ table {
   color: #3c3c3c;
 }
 
+.link {
+  display: block;
+  color: #f7f7f7;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.link__icon {
+  margin-right: 8px;
+}
+.link:hover {
+  color: #fff;
+}
+
 .btn-back__icon {
   color: #000;
 }
 
-.btn-explore {
+.btn-explore, .btn-start {
   font-family: "Roboto", sans-serif;
   font-size: 0.9rem;
   border: none;
@@ -213,10 +228,15 @@ table {
   color: white;
   text-decoration: none;
   transition: all 0.2s;
+  cursor: pointer;
 }
-.btn-explore:hover {
+.btn-explore:hover, .btn-start:hover {
   background: linear-gradient(to bottom right, #FF79DA 40%, #9356DC);
   box-shadow: 0px 1px 8px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-start {
+  padding-inline: 50px;
 }
 
 .btn-func {
@@ -295,21 +315,6 @@ table {
   transition: 0.2s ease-in;
 }
 .btn-validation__icon {
-  color: #fff;
-}
-
-.link {
-  display: block;
-  color: #f7f7f7;
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-size: 0.8rem;
-  font-weight: 400;
-}
-.link__icon {
-  margin-right: 8px;
-}
-.link:hover {
   color: #fff;
 }
 
@@ -465,11 +470,22 @@ table {
   background-repeat: no-repeat;
   padding-top: 180px;
 }
+.menu-page__container--la-palette {
+  background-image: url("../../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+.menu-page__container--le-delice {
+  background-image: url("../../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+.menu-page__container--la-note {
+  background-image: url("../../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
 .menu-page__container--a-la-francaise {
   background-image: url("../../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 }
 
 .menu {
+  display: flex;
+  flex-direction: column;
   background-color: #f7f7f7;
   padding: 30px 15px;
   border-top-left-radius: 40px;
@@ -478,16 +494,25 @@ table {
 .menu__header {
   position: relative;
 }
-.menu__btn {
+.menu__btn-like {
   position: absolute;
   top: 0;
   right: 30px;
 }
-.menu__item {
-  margin-top: 20px;
+.menu__title {
+  margin-bottom: 25px;
+}
+.menu__item:not(:last-child) {
+  margin-bottom: 40px;
 }
 .menu__card-container {
   margin-top: 20px;
+}
+.menu__card:not(:first-child) {
+  margin-top: 10px;
+}
+.menu__btn-start {
+  align-self: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
