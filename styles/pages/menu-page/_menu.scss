@@ -32,9 +32,18 @@
         margin-top: 10px;
     }
 
+    &__card {
+        opacity: 0;
+        animation: .5s fade-in linear forwards;
+    }
+
     &__btn-start {
         align-self: center;
     }
+}
 
-    
+@for $i from 1 through 4{
+    .menu__card:nth-child(#{$i}) {
+        animation-delay: 0.2s * $i;
+    }
 }

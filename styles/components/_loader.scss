@@ -1,10 +1,31 @@
-.loader {
-    display: none;
+.loader { 
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba($clr-primary , $alpha: .9);
-    z-index: 4;
+    background-color: rgba($clr-grey , $alpha: .9);
+    z-index: 2;
+    animation: 4s opacity-0 ease-in forwards;
+
+    &__list {
+        position: absolute;
+        top: 40%;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    &__item {
+        font-size: 3rem;
+        font-family: $ft-shrik;
+        color: $clr-dark-grey;
+        animation: 1s glow infinite;
+    }
 }
+
+@for $i from 1 through 8{
+    .loader__item--#{$i} {
+        animation-delay: 0.1s * $i;
+    }
+} 

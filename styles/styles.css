@@ -1,3 +1,47 @@
+@keyframes glow {
+  0% {
+    text-shadow: none;
+    color: #616161;
+  }
+  10% {
+    text-shadow: 0 0 7px #FF79DA, 0 0 50px #9356DC;
+    color: #9356DC;
+  }
+  20% {
+    text-shadow: 0 0 7px #FF79DA, 0 0 50px #9356DC;
+    color: #9356DC;
+  }
+}
+@keyframes opacity-0 {
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-150%);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -312,7 +356,6 @@ table {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: 0.2s ease-in;
 }
 .btn-validation__icon {
   color: #fff;
@@ -351,7 +394,7 @@ table {
 
 .card-food {
   display: flex;
-  align-items: stretch;
+  position: relative;
 }
 .card-food__text-container {
   padding: 15px 20px 10px 10px;
@@ -361,18 +404,37 @@ table {
   margin-top: 5px;
   display: flex;
 }
+.card-food__title, .card-food__description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 10px;
+}
+.card-food__description {
+  display: block;
+}
 .card-food__price {
+  display: block;
   margin-left: auto;
+  transition: transform 0.2s ease-in;
 }
 .card-food__btn {
-  display: none;
-  opacity: 0;
-  width: 0%;
+  position: absolute;
+  width: 80px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: transform 0.2s ease-in;
 }
 .card-food:hover .card-food__btn {
-  width: 20%;
-  display: flex;
-  opacity: 1;
+  transform: translateX(0);
+}
+.card-food:hover .card-food__price {
+  transform: translateX(-80px);
+}
+.card-food:hover .card-food__description {
+  width: 60%;
 }
 
 .header {
@@ -406,14 +468,59 @@ table {
 }
 
 .loader {
-  display: none;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(147, 86, 220, 0.9);
-  z-index: 4;
+  background-color: rgba(97, 97, 97, 0.9);
+  z-index: 2;
+  animation: 4s opacity-0 ease-in forwards;
+}
+.loader__list {
+  position: absolute;
+  top: 40%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.loader__item {
+  font-size: 3rem;
+  font-family: "Shrikhand", cursive;
+  color: #3c3c3c;
+  animation: 1s glow infinite;
+}
+
+.loader__item--1 {
+  animation-delay: 0.1s;
+}
+
+.loader__item--2 {
+  animation-delay: 0.2s;
+}
+
+.loader__item--3 {
+  animation-delay: 0.3s;
+}
+
+.loader__item--4 {
+  animation-delay: 0.4s;
+}
+
+.loader__item--5 {
+  animation-delay: 0.5s;
+}
+
+.loader__item--6 {
+  animation-delay: 0.6s;
+}
+
+.loader__item--7 {
+  animation-delay: 0.7s;
+}
+
+.loader__item--8 {
+  animation-delay: 0.8s;
 }
 
 .location {
@@ -511,8 +618,28 @@ table {
 .menu__card:not(:first-child) {
   margin-top: 10px;
 }
+.menu__card {
+  opacity: 0;
+  animation: 0.5s fade-in linear forwards;
+}
 .menu__btn-start {
   align-self: center;
+}
+
+.menu__card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.menu__card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.menu__card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.menu__card:nth-child(4) {
+  animation-delay: 0.8s;
 }
 
 /*# sourceMappingURL=styles.css.map */
