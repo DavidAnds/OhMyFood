@@ -256,6 +256,11 @@ table {
   color: #fff;
 }
 
+.container {
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
 .btn-back__icon {
   color: #000;
 }
@@ -359,6 +364,8 @@ table {
 }
 .btn-validation__icon {
   color: #fff;
+  font-size: 1.4rem;
+  transition: transform 0.3s ease-out;
 }
 
 .card {
@@ -393,48 +400,58 @@ table {
 }
 
 .card-food {
-  display: flex;
   position: relative;
+  max-width: 500px;
 }
 .card-food__text-container {
-  padding: 15px 20px 10px 10px;
+  padding: 15px 10px 10px 10px;
   width: 100%;
-}
-.card-food__details {
-  margin-top: 5px;
-  display: flex;
 }
 .card-food__title, .card-food__description {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-right: 10px;
+}
+.card-food__details {
+  margin-top: 5px;
+  display: flex;
+  width: 100%;
 }
 .card-food__description {
   display: block;
+  width: 80%;
 }
 .card-food__price {
   display: block;
+  width: 20%;
+  margin-right: 20px;
   margin-left: auto;
-  transition: transform 0.2s ease-in;
+  text-align: end;
+  transition: transform 0.3s ease-in;
 }
 .card-food__btn {
   position: absolute;
-  width: 80px;
+  width: 60px;
   top: 0;
   bottom: 0;
   right: 0;
   transform: translateX(100%);
-  transition: transform 0.2s ease-in;
+  transition: transform 0.3s ease-in;
 }
 .card-food:hover .card-food__btn {
   transform: translateX(0);
 }
 .card-food:hover .card-food__price {
-  transform: translateX(-80px);
+  transform: translateX(-60px);
 }
 .card-food:hover .card-food__description {
   width: 60%;
+}
+.card-food:hover .card-food__title, .card-food:hover .card-food__description {
+  width: 60%;
+}
+.card-food:hover .btn-validation__icon {
+  transform: rotate(720deg);
 }
 
 .header {
@@ -457,6 +474,8 @@ table {
 
 .footer {
   background-color: #3c3c3c;
+}
+.footer__container {
   padding: 20px 15px 30px;
   color: #f7f7f7;
 }
@@ -468,6 +487,7 @@ table {
 }
 
 .loader {
+  display: none;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -523,6 +543,23 @@ table {
   animation-delay: 0.8s;
 }
 
+@media (min-width: 1024px) {
+  .home__main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  .home__location {
+    grid-column: span 2;
+  }
+}
+@media (min-width: 1024px) {
+  .home__restaurants {
+    grid-column: span 2;
+  }
+}
+
 .location {
   display: flex;
   align-items: center;
@@ -546,9 +583,20 @@ table {
 .intro__btn {
   margin-top: 30px;
 }
+@media (min-width: 1024px) {
+  .intro {
+    background-color: #fff;
+    border-right: 1px solid #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
 
 .functionning {
   padding: 40px 15px 60px;
+  max-width: 600px;
   background-color: #fff;
 }
 .functionning__btn-container {
@@ -563,13 +611,27 @@ table {
 
 .restaurants {
   background-color: #f7f7f7;
+}
+.restaurants__container {
   padding: 50px 15px 50px;
 }
 .restaurants__card-container {
   margin-top: 20px;
 }
+@media (min-width: 768px) {
+  .restaurants__card-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .restaurants__card:not(:first-child) {
   margin-top: 20px;
+}
+@media (min-width: 768px) {
+  .restaurants__card:not(:first-child) {
+    margin-top: 0px;
+  }
 }
 
 .menu-page__container {
@@ -589,6 +651,12 @@ table {
 .menu-page__container--a-la-francaise {
   background-image: url("../../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
 }
+@media (min-width: 1024px) {
+  .menu-page__container {
+    background-repeat: repeat;
+    padding-top: 0;
+  }
+}
 
 .menu {
   display: flex;
@@ -597,9 +665,26 @@ table {
   padding: 30px 15px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
+  max-width: 1400px;
+  margin-inline: auto;
+}
+@media (min-width: 1024px) {
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    min-height: 80vh;
+  }
 }
 .menu__header {
   position: relative;
+}
+@media (min-width: 1024px) {
+  .menu__header {
+    grid-column: span 3;
+  }
 }
 .menu__btn-like {
   position: absolute;
@@ -619,11 +704,18 @@ table {
   margin-top: 10px;
 }
 .menu__card {
+  margin-inline: auto;
   opacity: 0;
   animation: 0.5s fade-in linear forwards;
 }
 .menu__btn-start {
   align-self: center;
+}
+@media (min-width: 1024px) {
+  .menu__btn-start {
+    grid-column: span 3;
+    justify-self: center;
+  }
 }
 
 .menu__card:nth-child(1) {

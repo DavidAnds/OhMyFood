@@ -5,9 +5,24 @@
     padding: 30px 15px;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
+    max-width: 1400px;
+    margin-inline: auto;
+
+    @include brk-desktop {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 20px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        min-height: 80vh;
+    }
 
     &__header {
         position: relative;
+
+        @include brk-desktop {
+            grid-column: span 3;
+        }
     }
 
     &__btn-like {
@@ -20,7 +35,7 @@
         margin-bottom: 25px;
     }
 
-    &__item:not(:last-child){
+    &__item:not(:last-child) {
         margin-bottom: 40px;
     }
 
@@ -33,16 +48,22 @@
     }
 
     &__card {
+        margin-inline: auto;
         opacity: 0;
-        animation: .5s fade-in linear forwards;
+        animation: 0.5s fade-in linear forwards;
     }
 
     &__btn-start {
         align-self: center;
+
+        @include brk-desktop {
+            grid-column: span 3;
+            justify-self: center;
+        }
     }
 }
 
-@for $i from 1 through 4{
+@for $i from 1 through 4 {
     .menu__card:nth-child(#{$i}) {
         animation-delay: 0.2s * $i;
     }

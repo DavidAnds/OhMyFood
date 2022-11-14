@@ -1,13 +1,27 @@
 .restaurants {
     background-color: $clr-light;
-    padding: 50px 15px 50px;
+
+    &__container {
+        padding: 50px 15px 50px;
+    }
+    
 
     &__card-container {
         margin-top: 20px;
+
+        @include brk-tablet {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr 1fr;
+        }
     }
 
     &__card:not(:first-child) {
         margin-top: 20px;
+
+        @include brk-tablet {
+           margin-top: 0px;
+        }
     }
 
 }

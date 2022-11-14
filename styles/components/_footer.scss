@@ -1,7 +1,10 @@
 .footer {
     background-color: $clr-dark-grey;
-    padding: 20px 15px 30px;
-    color: $clr-light;
+   
+    &__container {
+        padding: 20px 15px 30px;
+        color: $clr-light;
+    }
 
     &__text-container {
         margin-top: 15px;

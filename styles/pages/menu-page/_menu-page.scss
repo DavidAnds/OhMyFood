@@ -16,5 +16,10 @@
         &--a-la-francaise {
             background-image: url('../../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
         }
+
+        @include brk-desktop {
+            background-repeat: repeat;
+            padding-top: 0;
+        }
     }
 }

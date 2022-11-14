@@ -55,7 +55,7 @@
             />
         </header>
         <!-- MAIN -->
-        <main>
+        <main class="home__main">
             <!-- LOCATION -->
             <div class="home__location location">
                 <i class="location__icon fa-solid fa-location-dot"></i>
@@ -70,9 +70,9 @@
                     Découvrez des restaurants d'exception, séléctionnés par nos
                     choix
                 </p>
-                <button class="intro__btn btn-explore btn">
+                <a href="#restaurants" class="intro__btn btn-explore btn">
                     Explorer nos restaurants
-                </button>
+                </a>
             </div>
             <!-- fUNCTIONNING SECTION -->
             <section class="home__functionning functionning">
@@ -103,7 +103,8 @@
                     </button>
                 </div>
             </section>
-            <section class="home__restaurants restaurants">
+            <section class="home__restaurants restaurants" id="restaurants">
+                <div class="restaurants__container container">
                 <h2 class="restaurants__title heading-1">Restaurants</h2>
                 <div class="restaurants__card-container">
                     <a href="./pages/menu-la-palette-du-gout.html" class="restaurants__card card-pic card card">
@@ -167,23 +168,27 @@
                         </div>
                     </a>
                 </div>
+                </section>
+            </div>
             </section>
         </main>
         <!-- FOOTER -->
         <footer class="home__footer footer">
-            <p class="footer__logo text--logo">ohmyfood</p>
-
-            <div class="footer__text-container">
-                <a href="#" class="footer__link link">
-                    <i class="link__icon fa-solid fa-utensils fa-xs"></i>
-                    Proposer un restaurant
-                </a>
-                <a href="#" class="footer__link link">
-                    <i class="link__icon fa-solid fa-handshake-angle fa-xs"></i>
-                    Devenir partenaires
-                </a>
-                <a href="#" class="footer__link link"> Mentions légales </a>
-                <a href="#" class="footer__link link"> Contact </a>
+            <div class="footer__container container">
+                <p class="footer__logo text--logo">ohmyfood</p>
+    
+                <div class="footer__text-container">
+                    <a href="#" class="footer__link link">
+                        <i class="link__icon fa-solid fa-utensils fa-xs"></i>
+                        Proposer un restaurant
+                    </a>
+                    <a href="#" class="footer__link link">
+                        <i class="link__icon fa-solid fa-handshake-angle fa-xs"></i>
+                        Devenir partenaires
+                    </a>
+                    <a href="#" class="footer__link link"> Mentions légales </a>
+                    <a href="#" class="footer__link link"> Contact </a>
+                </div>
             </div>
         </footer>
     </body>

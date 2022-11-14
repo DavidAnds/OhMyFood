@@ -1,2 +1,20 @@
 .home {
+    &__main {
+        @include brk-desktop {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    &__location {
+        @include brk-desktop {
+            grid-column: span 2;
+        }
+    }
+
+    &__restaurants {
+        @include brk-desktop {
+            grid-column: span 2;
+        }
+    }
 }
