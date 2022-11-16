@@ -96,5 +96,6 @@
 
     &:hover .btn-validation__icon {
         transform: rotate( 2 * 360deg);
+        transition: transform .3s ease-out .1s;
     }
 }

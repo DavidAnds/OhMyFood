@@ -366,7 +366,6 @@ table {
 .btn-validation__icon {
   color: #fff;
   font-size: 1.4rem;
-  transition: transform 0.3s ease-out;
 }
 
 .card {
@@ -453,6 +452,7 @@ table {
 }
 .card-food:hover .btn-validation__icon {
   transform: rotate(720deg);
+  transition: transform 0.3s ease-out 0.1s;
 }
 
 .header {
