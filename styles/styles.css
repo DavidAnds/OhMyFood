@@ -321,8 +321,10 @@ table {
   margin-right: 20px;
 }
 .btn-func:hover {
-  background-color: #fff;
-  box-shadow: 0px 4px 6px 4px rgba(0, 0, 0, 0.08);
+  background-color: rgba(147, 86, 220, 0.2);
+}
+.btn-func:hover .btn-func__icon {
+  color: #9356DC;
 }
 .btn-func--primary {
   background-color: rgba(147, 86, 220, 0.2);

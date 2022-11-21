@@ -68,8 +68,11 @@
     }
 
     &:hover {
-        background-color: $clr-white;
-        box-shadow: $box-shadow-sm;
+        background-color: rgba($clr-primary, $alpha: 0.2);
+
+        & .btn-func__icon {
+            color: $clr-primary;
+        }
     }
     &--primary {
         background-color: rgba($clr-primary, $alpha: 0.2);
