@@ -69,19 +69,9 @@
 
     &:hover {
         background-color: rgba($clr-primary, $alpha: 0.2);
+        cursor: pointer;
 
         & .btn-func__icon {
-            color: $clr-primary;
-        }
-    }
-    &--primary {
-        background-color: rgba($clr-primary, $alpha: 0.2);
-
-        &:hover {
-            background-color: rgba($clr-primary, $alpha: 0.15);
-        }
-
-        &__icon {
             color: $clr-primary;
         }
     }
