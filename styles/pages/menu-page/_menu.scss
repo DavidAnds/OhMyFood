@@ -61,6 +61,10 @@
             justify-self: center;
         }
     }
+
+    &__subtitle--left {
+        margin-left: 50px;
+    }
 }
 
 @for $i from 1 through 4 {

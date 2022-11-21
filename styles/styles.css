@@ -717,6 +717,9 @@ table {
     justify-self: center;
   }
 }
+.menu__subtitle--left {
+  margin-left: 50px;
+}
 
 .menu__card:nth-child(1) {
   animation-delay: 0.2s;
